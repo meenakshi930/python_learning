@@ -1,0 +1,639 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "9dc4626f-c7e6-4192-996a-0a909faca32a",
+   "metadata": {},
+   "source": [
+    "# variables"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "58e08e4d-60f8-4f12-8ff8-73c8015d593b",
+   "metadata": {},
+   "source": [
+    "variables are fundamental building blocks that allow us to store, manipulate, and reuse data in our code"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0bfe5e46-a82c-490b-86a2-fdd7603fbadc",
+   "metadata": {},
+   "source": [
+    "# Rules for Python Variable Names\n",
+    "When naming variables in Python, follow these rules:\n",
+    "\n",
+    "1. Use only alphabets, numbers, and underscores (A-Z, a-z, 0-9, and _). Example: user_age, total_count2\n",
+    "2. Start with a letter or underscore, not a number. Valid: _count, name1 Invalid: 1name\n",
+    "3. No spaces allowed. Valid: first_name Invalid: first name\n",
+    "4. Case-sensitive: age, Age, and AGE are three different variables.\n",
+    "5. Avoid using Python keywords (like if, for, while) as variable names."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "5a7c476e-bb18-4130-a4eb-c212849b4984",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "25\n"
+     ]
+    }
+   ],
+   "source": [
+    "x=25\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "32a4fe18-ab1e-4348-92e3-3c4bcd01f51b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "meenakshi\n"
+     ]
+    }
+   ],
+   "source": [
+    "y=\"meenakshi\"\n",
+    "print(y)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d1f0d2c4-fe43-4992-8fb7-6571f04fb3ab",
+   "metadata": {},
+   "source": [
+    "# Data Type"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "0dd50841-87a5-431f-a5ed-1f7a9dd98d91",
+   "metadata": {},
+   "source": [
+    "1. Numeric Types:\n",
+    "    integer(int)\n",
+    "    Floating-point numbers (float)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "748f3f5e-9518-4713-b214-f331b9701a28",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "25\n",
+      "-10\n",
+      "3.14159\n",
+      "-2.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "age = 25\n",
+    "print(age)\n",
+    "count = -10\n",
+    "print(count)\n",
+    "pi = 3.14159\n",
+    "print(pi)\n",
+    "temperature = -2.5\n",
+    "print(temperature)"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "886869c4-5a65-43b5-9db1-1b252af3392e",
+   "metadata": {},
+   "source": [
+    "2. String Type:\n",
+    "    Strings store text and are created using single or double quotes."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "d7703ddb-f3eb-4f3e-bfc0-82a48254b711",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "meenakshi\n"
+     ]
+    }
+   ],
+   "source": [
+    "name=\"meenakshi\"\n",
+    "print(name)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "f1d8fc9c-6c84-4539-a9d0-9fd275ad519a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "meenakshigupta\n",
+      "m\n",
+      "meena\n"
+     ]
+    }
+   ],
+   "source": [
+    "# String operations\n",
+    "full_name=\"meenakshi\"+\"gupta\" # concatenation\n",
+    "print(full_name)\n",
+    "first_char=print(name[0]) # Indexing\n",
+    "substring = name[0:5] # Slicing\n",
+    "print(substring)"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "d299834a-e6bd-4118-9c95-c3053bb4316e",
+   "metadata": {},
+   "source": [
+    "3. Boolean Type\n",
+    "    Booleans represent True or False values."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "4689b971-6438-4421-b6cf-01d764ebb8e6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "is_student = True\n",
+    "print(is_student)\n",
+    "has_license = False\n",
+    "print(has_license)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "0b1f2e8e-067d-47a9-9d4f-a3a6e1e90767",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "You are a student\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Booleans in conditional statements\n",
+    "if is_student:\n",
+    "    print(\"You are a student\")\n",
+    "else:\n",
+    "    print(\"You are not a student\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "69f94363-9e3c-4d68-a1e3-feacfacd6951",
+   "metadata": {},
+   "source": [
+    "* Sequence Types\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "04417e6f-5eed-478d-b5f1-6f9b7f0b2ab4",
+   "metadata": {},
+   "source": [
+    "4. Lists   []\n",
+    "    Lists are Ordered, mutable collections that can contain items of different types."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "8c9df61c-4a2a-44a4-bdb0-e1395de4babb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5]\n",
+      "[1, 2, 3, 4, 5, 6]\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "numbers = [1, 2, 3, 4, 5]\n",
+    "print(numbers)\n",
+    "numbers.append(6)\n",
+    "print(numbers)\n",
+    "first_item=numbers[0]\n",
+    "print(first_item)\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "628a59e8-70e2-4ec0-bf75-99189c70137a",
+   "metadata": {},
+   "source": [
+    "5. Tuples  ()\n",
+    "    Tuples are Ordered, immutable collections."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "4fc60f69-dd43-41ee-9796-8b8331d550b7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1, 2)\n"
+     ]
+    }
+   ],
+   "source": [
+    "num=(1,2)\n",
+    "print(num)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5e821736-8a51-4bc9-ac39-99ee2b5eadaa",
+   "metadata": {},
+   "source": [
+    "* Mapping Type"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "690688f4-0939-4538-85f1-ef7a01c8decf",
+   "metadata": {},
+   "source": [
+    "6. Dictionaries  {}\n",
+    "    Dictionaries store key-value pairs."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "73d7017b-0fac-489f-bc93-18d9aaeabdc2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'name': 'john', 'age': 20, 'city': 'agra'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "person={'name': 'john','age':20,'city': 'agra'}\n",
+    "print(person)"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "d63dd794-7b22-43bb-ba0c-61b655f807d1",
+   "metadata": {},
+   "source": [
+    "7. Set Type {}\n",
+    "    Unordered collections of unique elements."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "55c617b6-6e92-4d8c-85b7-b689ffcd468b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 2, 3, 4, 5}\n",
+      "{1, 2, 3, 4, 5, 6}\n"
+     ]
+    }
+   ],
+   "source": [
+    "unique_numbers = {1, 2, 3, 4, 5}\n",
+    "print(unique_numbers)\n",
+    "unique_numbers.add(6)  # Adding an element\n",
+    "unique_numbers.add(1)  # This won't add a duplicate\n",
+    "print(unique_numbers)"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "cc5d4d79-6e21-48f6-ba51-3d4438b12362",
+   "metadata": {},
+   "source": [
+    "8. None Type\n",
+    "    Represents the absence of a value."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "6f6f5608-cd4f-46a0-98f1-74060e31b0f8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "No value assigned\n"
+     ]
+    }
+   ],
+   "source": [
+    "empty_value = None\n",
+    "\n",
+    "if empty_value is None:\n",
+    "    print(\"No value assigned\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c7bf6685-af4e-4f83-810a-da90666409d9",
+   "metadata": {},
+   "source": [
+    "# Type Conversion"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "7a499e7e-0d50-4278-8fed-eea8beb65bf7",
+   "metadata": {},
+   "source": [
+    "Implicit Type Conversion"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "c2449fc5-6907-48cf-831e-04bfcbde2ecf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "x=7\n",
+    "y=x/2\n",
+    "print(y) # float"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "9329f9de-a04b-4cc1-a0f0-ed648f432d61",
+   "metadata": {},
+   "source": [
+    "Explicit Type Conversion"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "568eb804-5dad-4616-88a6-0d6b28ba2353",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "# String to int\n",
+    "num_str=\"10\"\n",
+    "num_int=int(num_str)\n",
+    "print(num_int)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "1fbc3005-5abe-4e3d-9ba2-84e7919d7716",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Int to float\n",
+    "x=5\n",
+    "y=float(x)\n",
+    "print(y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "ba5b6326-d50f-4fa8-97ab-4c45bf192edb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Float to int (truncates decimal part)\n",
+    "z=int(3.14)\n",
+    "print(z)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c24180e1-45e4-40a2-ba88-f2be8dd52895",
+   "metadata": {},
+   "source": [
+    "# Checking Variable Types\n",
+    "Use type() or isinstance() to check variable types:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "a763ad3f-6835-474c-a118-30f40539e55b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'>\n",
+      "<class 'float'>\n",
+      "<class 'str'>\n",
+      "<class 'list'>\n",
+      "<class 'tuple'>\n",
+      "<class 'set'>\n",
+      "<class 'bool'>\n",
+      "<class 'dict'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=5\n",
+    "print(type(a))\n",
+    "b=2.4\n",
+    "print(type(b))\n",
+    "c=\"hello\"\n",
+    "print(type(c))\n",
+    "d=[1,2]\n",
+    "print(type(d))\n",
+    "e=(1,2)\n",
+    "print(type(e))\n",
+    "f={'name: john'}\n",
+    "print(type(f))\n",
+    "g=True\n",
+    "print(type(g))\n",
+    "h={'name': 'john','age':20,'city': 'agra'}\n",
+    "print(type(h))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "37aeb3d8-f7be-4ede-9cae-ff2a1e106d47",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "b =1\n",
+    "print(isinstance(b, str))  \n",
+    "b = \"Hello\"\n",
+    "print(isinstance(b, str))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4279046-4bd3-42be-a7b8-464088680208",
+   "metadata": {},
+   "source": [
+    "# Coding Task"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "abd12c83-a4aa-4ef5-b97a-bd66e5077910",
+   "metadata": {},
+   "source": [
+    "Write a program to calculate the area of a circle:\n",
+    "\n",
+    "Declare variables radius (8.9) and pi (3.14).\n",
+    "Calculate the area using the formula: pi × radius × radius.\n",
+    "Output only the area."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "6f22aa37-2064-4808-a38b-be15aaa776ce",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "248.71940000000004\n"
+     ]
+    }
+   ],
+   "source": [
+    "radius=8.9\n",
+    "pi=3.14\n",
+    "area=pi*radius*radius\n",
+    "print(area)"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "d7486bc1-ed17-44bd-8c4b-31a87ca1bb66",
+   "metadata": {},
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (base)",
+   "language": "python",
+   "name": "base"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
